@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Киберполигон | О проекте</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- IT-тематические шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f0ff;
+            --secondary: #7df9ff;
+            --dark-bg: #0a0a1a;
+            --card-bg: rgba(20, 40, 60, 0.7);
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            background-color: var(--dark-bg);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(125, 249, 255, 0.1) 0%, transparent 20%);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        header {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0, 240, 255, 0.2);
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            text-shadow: 0 0 8px rgba(125, 249, 255, 0.8);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .project-hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 26, 0.7);
+            z-index: -1;
+        }
+        
+        .project-description {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .project-goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .goal-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .goal-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        
+        
+        footer {
+            background: linear-gradient(to right, #0f2027, #203a43);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(0, 240, 255, 0.3);
+            margin-top: 3rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html" class="active">О проекте</a>
+            <a href="team.html">Участники</a>
+            <a href="blog.html">Журнал</a>
+            <a href="resources.html">Ресурсы</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="project-hero">
+            <h1>О проекте "Киберполигон"</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                «Киберполигон» — это образовательная платформа, направленная на практическую подготовку студентов в сфере кибербезопасности, разработки ПО и работы с современными ИТ-технологиями. Мы создаем среду для реального опыта в условиях, приближенных к промышленным.
+            </p>
+        </section>
+
+        <!-- Описание проекта -->
+        <section class="project-description">
+            <h2>Описание проекта</h2>
+            <p>
+                Киберполигоны в составе университетов позволяют продемонстрировать системный подход к обучению информационной безопасности, отражают современные потребности образования, позволяют привлекать высокобалльных абитуриентов и крупных работодателей. Актуальность создания киберполигона в университете заключается в нескольких аспектах. 
+            </p>
+            <p>
+                Во-первых, такая площадка позволяет студентам получить практические навыки в области кибербезопасности. Киберполигон предоставляет возможность проводить симуляции реальных кибератак и тренироваться в защите от них. Это помогает студентам развить навыки обнаружения, анализа и реагирования на киберугрозы.
+            </p>
+            <p>
+                Во-вторых, создание киберполигона способствует исследованиям и разработкам в области кибербезопасности. Университеты могут использовать киберполигон для разработки новых методов защиты от кибератак, анализа уязвимостей и тестирования безопасности систем.
+            </p>
+            <p>
+                Также, киберполигон может служить площадкой для сотрудничества с индустрией кибербезопасности. Университеты могут установить партнерские отношения с компаниями и организациями, чтобы предоставить студентам возможность работать над реальными проектами и получить ценный опыт работы в индустрии. 
+            </p>
+            <p>
+                Кроме того, создание киберполигона помогает повысить осведомленность о киберугрозах и способах их предотвращения. Киберполигон может использоваться для проведения тренингов и семинаров по кибербезопасности для студентов, сотрудников университета и широкой общественности.
+            </p>
+            <p>
+                Наконец, создание киберполигона в университете способствует подготовке квалифицированных киберспециалистов. Студенты, получившие опыт работы на киберполигоне, могут стать востребованными специалистами в области кибербезопасности и помочь защитить информационные системы от киберугроз.
+            </p>
+
+        </section>
+
+        <!-- Цель проекта -->
+        <section>
+            <h2>Цель проекта</h2>
+            <div class="project-goals">
+                <div class="goal-card">
+                    
+                    <p>На проекте «Киберполигон» есть задачи по разработке фронтенда на React и бэкенда на Django, а также по программированию интерфейсов для работы с системами виртуализации и контейнеризации (VirtualBox, KVM, Docker).</p>
+                </div>
+            </div>
+        </section>
+
+    
+
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>© 2025 Проект "Киберполигон" | Все права защищены</p>
+        <p>Контакты: <span style="font-family: 'Share Tech Mono', monospace;"></span></p>
+    </footer>
+</body>
+</html>

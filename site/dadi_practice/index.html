@@ -3,111 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookShop</title>
-    <link rel="stylesheet" href="/css/css.css">
-    <link rel="stylesheet" href="/css/normalize.css"> 
-    <link rel="icon" href="img/book.png">
+    <title>Киберполигон | Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем IT-тематические шрифты с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Основные шрифты */
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            background-color: #0a0a1a;
+        }
+        
+        /* IT-шрифт для всех заголовков */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: #00f0ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #7df9ff;
+        }
+        
+        /* Моноширинный шрифт для технических элементов */
+        code, .mono {
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        header {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0, 240, 255, 0.2);
+            border-bottom: 1px solid #00f0ff;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: #7df9ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #00f0ff;
+            background: rgba(0, 240, 255, 0.1);
+            text-shadow: 0 0 8px rgba(125, 249, 255, 0.8);
+        }
+        
+        .hero {
+            background: url('https://www.neoflex.ru/upload/iblock/d16/msa_platform.jpg') no-repeat center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid #00f0ff;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10, 10, 26, 0.7), rgba(10, 10, 26, 0.9));
+        }
+        
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #b8f2ff;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: #00f0ff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border: 2px solid #00f0ff;
+            border-radius: 4px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+        
+        .about-section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(15, 32, 39, 0.6);
+            border-radius: 8px;
+            margin-top: 100px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        
+        .about-section p {
+            font-size: 1.2rem;
+            color: #d1f7ff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 1rem;
+            background: #0a0e17;
+        }
+        
+        .feature-card {
+            flex: 1 1 300px;
+            background: rgba(20, 40, 60, 0.7);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+            border-color: #00f0ff;
+        }
+        
+        .feature-card p {
+            color: #b8f2ff;
+        }
+        
+        .feature-card img {
+            filter: invert(78%) sepia(51%) saturate(1557%) hue-rotate(149deg) brightness(105%) contrast(105%);
+            margin-top: 100px;
+        }
+        
+        footer {
+            background: linear-gradient(to right, #0f2027, #203a43);
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(0, 240, 255, 0.3);
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+            color: #b8f2ff;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-
-        <nav class="navigation">
-            <h2>For BOOK</h2>
-            <ul>
-                <li><a href="index.html">Вы тут</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="review.html">О проекте</a></li>
-            </ul>
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="team.html">Участники</a>
+            <a href="blog.html">Журнал</a>
+            <a href="resources.html">Ресурсы</a>
         </nav>
+    </header>
 
-        <main class="maininfo">
-
-            <div class="section">
-                <h3>Приветствие! 📚</h3>
-                <p>Здесь будет какая-то информация.<br>
-                    Мы делаем совместно практику и пробуем создать наш статический сайт<br>
-                    ...!</p>
-
-            </div>
-
-
-            <div class="place">
-                <p>Мы находимся где-то тут:</p>
-                <img class="point" src="img/i.webp" alt="Карта нашего расположения" width="500" height="400">
-
-            </div>
-
-
-
-        </main>
-
-
-
-
-        <div class="text">
-            <h3>
-                Подборка новинок:
-            </h3>
-        </div>
+    <!-- Основной контент -->
+    <main>
         
-        <div class="newbook">
-           
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Киберполигон</h1>
+                <p>Киберполигоны в составе университетов позволяют продемонстрировать системный подход к обучению информационной безопасности, отражают современные потребности образования, позволяют привлекать высокобалльных абитуриентов и крупных работодателей.</p>
+                <a href="about.html" class="btn">Узнать больше</a>
+            </div>
+        </section>
 
-            <section class="imgnew">
-                <img class="red" src="img/красная.webp" alt="красная книга" width="500" height="400">
-                <img class="sochy" src="img/новаясочувствие.webp" alt="сочувствие" width="500" height="400">
-                <img class="gosp" src="img/хозяйка.webp" alt="хозяйка" width="500" height="400">
-                
-
-            </section>
-            
-        </div>
-
-
-        <div class="textPOP">
-            <h3>
-                Популярные книги сейчас!:
-            </h3>
-        </div>
-        
-        <div class="POPbook">
-           
-
-            <section class="imgPOP">
-                <img class="red" src="img/кошки.webp" alt="исчезли кошки" width="500" height="400">
-                <img class="sochy" src="img/лес.webp" alt="лес" width="500" height="400">
-                <img class="gosp" src="img/скорбь.webp" alt="скорбь сатаны" width="500" height="400">
-                
-
-            </section>
-            
-        </div>
+        <!-- Краткое описание проекта -->
+        <section class="about-section">
+            <h2>О нашем проекте</h2>
+            <p>
+                «Киберполигон» — это образовательная платформа, направленная на практическую подготовку студентов в сфере кибербезопасности, разработки ПО и работы с современными ИТ-технологиями. Мы создаем среду для реального опыта в условиях, приближенных к промышленным.
+            </p>
+        </section>
 
 
-        <div class="downtwolist"> 
 
-            <footer>
-
-                <div class="wrapftwo">
-
-                    <p> 
-                        📩 Свяжитесь с нами – будем рады помочь!
-                        ✉️ Email: <a href="">[почта]</a><br>
-                        📞 Телефон: <a href="">[мобильный]</a><br>
-                        📍 Мы в соцсетях: <a href="">[канал]</a><br>
-                   </p> 
-
-                </div>
-
-            </footer>
-            
-        </div> 
-
-
-    </div>
-
-
+    <!-- Подвал сайта -->
+    <footer>
+        <p>© 2025 Киберполигон | Проектная деятельность</p>
+        <!--<p>Контакты: <span class="mono"></span></p>
+    </footer>
 </body>
-
 </html>
