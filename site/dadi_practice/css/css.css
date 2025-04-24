@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Киберполигон | Главная</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Подключаем IT-тематические шрифты с Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
+
         /* Основные шрифты */
         body {
             font-family: 'Rajdhani', sans-serif;
@@ -80,7 +69,65 @@
             background: rgba(0, 240, 255, 0.1);
             text-shadow: 0 0 8px rgba(125, 249, 255, 0.8);
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .container li{
+            list-style: none;
+        }
+
+        .project-hero{
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
+            position: relative;
+            
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 26, 0.7);
+            z-index: -1;
+            
+        }
+
+        .project-description{
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-description a{
+             margin:0;
+            text-decoration:none;
+            font-size:25px;
+        }
         
+        .project-description a:visited {
+            color:#dfddd8;
+        
+    }
+    .project-description a:hover {
+        color:rgba(0, 240, 255, 0.3);
+        
+    }
+    .project-description a:active {
+        color:rgba(0, 240, 255, 0.3);
+        
+    }
+
         .hero {
             background: url('https://www.neoflex.ru/upload/iblock/d16/msa_platform.jpg') no-repeat center/cover;
             height: 500px;
@@ -202,48 +249,138 @@
             margin: 0.5rem 0;
             color: #b8f2ff;
         }
-    </style>
-</head>
-<body>
-    <!-- Шапка сайта с навигацией -->
-    <header>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="about.html">О проекте</a>
-            <a href="team.html">Участники</a>
-            <a href="j.html">Журнал</a>
-            <a href="res.html">Ресурсы</a>
-        </nav>
-    </header>
 
-    <!-- Основной контент -->
-    <main>
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
         
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Киберполигон</h1>
-                <p>Киберполигоны в составе университетов позволяют продемонстрировать системный подход к обучению информационной безопасности, отражают современные потребности образования, позволяют привлекать высокобалльных абитуриентов и крупных работодателей.</p>
-                <a href="about.html" class="btn">Узнать больше</a>
-            </div>
-        </section>
+        .back-link:hover {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+        }
 
-        <!-- Краткое описание проекта -->
-        <section class="about-section">
-            <h2>О нашем проекте</h2>
-            <p>
-                «Киберполигон» — это образовательная платформа, направленная на практическую подготовку студентов в сфере кибербезопасности, разработки ПО и работы с современными ИТ-технологиями. Мы создаем среду для реального опыта в условиях, приближенных к промышленным.
-            </p>
-        </section>
+        .members-list {
+            box-sizing: border-box;
+            justify-content:space-around;
+            display:flex;
+            font-size:30px;
+            
+        }
 
 
+        /*MEMBERS///////////////////*/
+.members-div {
+	padding-top:5px;
+	height:auto;
+	background-color: #203a43;	
+    background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
 
-    <!-- Подвал сайта -->
-    <footer>
-        <p><span class="mono">© 2025 Киберполигон | Проектная деятельность</p>
-        <p>Контакты: 
-            тел.: +7 (495) 223-05-23<br>
-            тел: +7 (495) 276-37-36<br>
-            e-mail: mospolytech@mospolytech.ru</span></p>
-    </footer>
-</body>
-</html>
+.member-card {
+	background-color: #203a43;
+	border-radius:3%;
+	-webkit-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.8);
+	-moz-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.8);
+	box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.8);
+	
+}
+/*END OF MEMBERS/////////////////////*
+
+/*REFERNCES///////////////////////////////*/
+.res-ref {
+	background-color: #334ea1;
+}
+.main-ref {
+	background-color: #334ea1;
+}
+.journal-ref {
+	background-color: #334ea1;
+}
+.members-ref {
+	background-color: #334ea1;
+}
+.about-ref {
+	background-color: #334ea1;
+}
+
+
+/*RESOURCES//////////////////////////*/
+.res-logo {
+	display:flex;
+	align-items:center;
+	justify-content:space-beetwen;
+	gap:20px;
+}
+.res-logo img {
+	transition: margin-bottom 0.3s ease;
+}
+
+.logo {
+	margin-left:20%;
+}
+.res-div {
+	margin-top:0;
+	margin-left:10%;
+	margin-right:10%;
+	height:35em;
+	color:#dfddd8;
+}
+
+.res-div li:hover{
+	padding-left:5%;
+	background-color:#7d94e8;
+}
+.res-div li{
+	padding-left:3%;
+}
+
+
+.references {
+	border-radius:0% 0% 5% 5%;
+	padding-top:2%;
+	height:90%;
+	background-color: #334ea1;
+	
+}
+
+.res-div h1 {
+	color:#dfddd8;
+	padding:20px;
+	padding-top:10px;
+	background-color:#29365e;
+	margin-bottom: 0;
+}
+
+
+.references a {
+	margin:0;
+	text-decoration:none;
+	font-size:25px;
+}
+
+
+.references a:visited {
+		color:#dfddd8;
+	
+}
+.references a:hover {
+	color:#110838;
+	
+}
+.references a:active {
+	color:black;
+	
+}
+/*END OF RESOURCES///////////////////*
+
+    
